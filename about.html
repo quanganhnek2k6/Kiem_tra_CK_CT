@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về chúng tôi - Nhà hàng Kiệt Anh Nhi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #d4231f 0%, #ff6b6b 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://dntu.edu.vn/storage/Setting/01KG9CYF13JZHBT05Z66XVDNWW.png') no-repeat center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        header h1, header p, .logo {
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            margin-bottom: 10px;
+        }
+        .logo img {
+            max-width: 50px;
+            height: auto;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #d4231f;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #d4231f;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-item h3 {
+            color: #d4231f;
+            margin-bottom: 10px;
+        }
+        .menu-item p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .price {
+            color: #d4231f;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .contact-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+        }
+        .contact-card .contact-details p {
+            margin: 8px 0;
+        }
+        .contact-card .contact-details p strong {
+            color: #d4231f;
+        }
+        .contact-card iframe {
+            border-radius: 8px;
+            width: 100%;
+            min-height: 280px;
+        }
+        @media (min-width: 768px) {
+            .contact-card {grid-template-columns: 1fr 1fr;}
+        }
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .member:hover {
+            transform: translateY(-10px);
+        }
+        .member-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+        .chef {
+            background-image: url('https://scontent.fsgn10-1.fna.fbcdn.net/v/t39.30808-6/473421780_990461266236059_5594638334962422868_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Tj8rC4o57NIQ7kNvwE8-OEl&_nc_oc=Adou5mH8UDrzU5tkbnCvQfiQrtpf4z4b7RUIN4H9QDOYIjsGRyj8hPnCxeUwFBybtODPG7VTNpwjh3yJwbF_Jrzh&_nc_zt=23&_nc_ht=scontent.fsgn10-1.fna&_nc_gid=r1i1xyLI0US0LkzlYlIK5g&_nc_ss=7a32e&oh=00_AfyuupqewoJ3XudPqjykky49AAewMZ3xpZMeZr5wVspNdw&oe=69C58338');
+        }
+        .manager {
+            background-image: url('https://scontent.fsgn10-1.fna.fbcdn.net/v/t39.30808-6/533826542_747772408179764_8986314329177669696_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=53a332&_nc_ohc=EJf4Zz_UP4IQ7kNvwENVlN8&_nc_oc=AdrJDShwq5UmiXWxBFO8dAS1uDlkL4O6gPP5dfackUdxYDg_YrGF6myc_0dCuDYgAmb0n0980F5YusjMoXujvzNG&_nc_zt=23&_nc_ht=scontent.fsgn10-1.fna&_nc_gid=nr9bVJaVqTlEoc59E9D_kA&_nc_ss=7a32e&oh=00_AfyF-LA4Y0ab-A5k3J1m8vTlf3Ehj3KGw6gqyAUIpwz3gg&oe=69C58261');
+        }
+        .expert {
+            background-image: url('https://scontent.fsgn10-1.fna.fbcdn.net/v/t39.30808-1/487210623_1160388475577117_938860333437040302_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=1d2534&_nc_ohc=o1jN_48g8FEQ7kNvwE-IRF7&_nc_oc=AdqFPk-BX7lnhD0SalknQMGLEI9mZgrGXdPdpNP4BLLwNQgYlKVMRLmltXEjAQQNXP_3atxBzV-a57xYVGygN5Uk&_nc_zt=24&_nc_ht=scontent.fsgn10-1.fna&_nc_gid=fpCJYzEctE2N3Ukl_8rCWQ&_nc_ss=7a32e&oh=00_Afw_xDcKzi1Fz-TZfEPY2X1WaqOD6Y2HDz8HUKFLgpfrlA&oe=69C57F56');
+        }
+        .member-info {
+            padding: 25px;
+        }
+        .member-info h3 {
+            color: #d4231f;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .member-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        .role {
+            color: #d4231f;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://dntu.edu.vn/storage/Setting/01KG9CYF13JZHBT05Z66XVDNWW.png" alt="Logo Nhà hàng Kiệt Anh Nhi">
+        </div>
+        <h1>Nhà hàng Kiệt Anh Nhi</h1>
+        <p>Hương vị chính hiệu xứ Chùa</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="menu.html">Thực đơn</a>
+        <a href="about.html">Về chúng tôi</a>
+        <a href="index.html#contact">Liên hệ</a>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h2>Về chúng tôi</h2>
+            <p>Nhà hàng Ăn Thái mang đến cho bạn những món ăn ngon nhất từ xứ Chùa Nobel. Với các đầu bếp có kinh nghiệm và nguyên liệu tươi sống, chúng tôi cam kết mang lại trải nghiệm ẩm thực tuyệt vời.</p>
+            <p>Được thành lập từ năm 2010, Ăn Thái đã trở thành điểm đến quen thuộc cho những ai yêu thích ẩm thực Thái Lan tại Việt Nam. Chúng tôi tự hào về việc duy trì hương vị truyền thống của các món ăn Thái, kết hợp với sự sáng tạo để phù hợp với khẩu vị Việt Nam.</p>
+            <p>Không gian nhà hàng được thiết kế ấm cúng với màu sắc và trang trí mang đậm nét văn hóa Thái. Đội ngũ phục vụ thân thiện và chuyên nghiệp sẽ mang đến cho bạn cảm giác như đang ngồi trong một quán ăn đường phố Bangkok.</p>
+            <p>Hãy đến với Ăn Thái để khám phá sự phong phú của ẩm thực Thái Lan - từ những món cay nồng như Tom Yum đến những món ngọt ngào như Mango Sticky Rice. Chúng tôi cam kết sử dụng nguyên liệu nhập khẩu trực tiếp từ Thái Lan để đảm bảo chất lượng tốt nhất.</p>
+            <h3>Đội ngũ sáng lập</h3>
+            <div class="team">
+                <div class="member">
+                    <div class="member-image chef"></div>
+                    <div class="member-info">
+                        <h3>Lã Ngọc Quang Anh</h3>
+                        <p class="role">Trưởng bếp chính</p>
+                        <p>Có 10 năm kinh nghiệm trong ẩm thực Thái Lan. Đã học nấu ăn tại Bangkok và mang về những công thức truyền thống.</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-image manager"></div>
+                    <div class="member-info">
+                        <h3>Nguyễn Vũ Trúc Nhi</h3>
+                        <p class="role">Quản lý nhà hàng</p>
+                        <p>Chuyên gia quản lý với kinh nghiệm 8 năm trong ngành dịch vụ ăn uống. Đảm bảo mọi khách hàng đều hài lòng.</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-image expert"></div>
+                    <div class="member-info">
+                        <h3>Trần Dương Anh Kiệt</h3>
+                        <p class="role">Chuyên gia ẩm thực Thái</p>
+                        <p>Người Việt gốc Thái, mang trong mình niềm đam mê văn hóa và ẩm thực Thái. Tư vấn về hương vị chân thực.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="section" id="contact">
+            <h2>Liên hệ</h2>
+            <div class="contact-card">
+                <div class="contact-details">
+                    <p><strong>Địa chỉ:</strong> 206 Đường Nguyễn Khuyến, Khu Phố 5, Phường Trảng Dài, Tỉnh Đồng Nai</p>
+                    <p><strong>Điện thoại:</strong> <a href="tel:02516538167">02516 538 167</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:fit@dntu.edu.vn">fit@dntu.edu.vn</a></p>
+                    <p><strong>Giờ mở cửa:</strong> 10:00 - 22:00 (Hàng ngày)</p>
+                </div>
+                <iframe src="https://maps.google.com/maps?q=Trường%20đại%20học%20Công%20nghệ%20Đồng%20Nai&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nhà hàng Ăn Thái. Tất cả quyền được bảo lưu.</p>
+    </footer>
+</body>
+</html>

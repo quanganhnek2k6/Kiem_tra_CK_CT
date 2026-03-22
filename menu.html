@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhà hàng Kiệt Anh Nhi - Hương vị xứ Chùa</title>
+    <title>Thực đơn - Nhà hàng Kiệt Anh Nhi</title>
     <style>
         * {
             margin: 0;
@@ -67,21 +67,6 @@
         nav a:hover {
             color: #d4231f;
         }
-        .banner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSkwsXBUdFwoyCLVCkQ9-adkRwsamgobJlg&s');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .banner h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .banner p {
-            font-size: 1.3em;
-        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -140,19 +125,8 @@
             width: 100%;
             min-height: 280px;
         }
-        .promotions p {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-            color: #333;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-left: 5px solid #d4231f;
-            transition: transform 0.3s ease;
-        }
-        .promotions p:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        @media (min-width: 768px) {
+            .contact-card {grid-template-columns: 1fr 1fr;}
         }
         footer {
             background-color: #333;
@@ -173,56 +147,72 @@
     </header>
 
     <nav>
-        <a href="#home">Trang chủ</a>
+        <a href="index.html">Trang chủ</a>
         <a href="menu.html">Thực đơn</a>
         <a href="about.html">Về chúng tôi</a>
-        <a href="#contact">Liên hệ</a>
+        <a href="index.html#contact">Liên hệ</a>
     </nav>
 
-    <div class="banner">
-        <h2>Chào mừng đến với Nhà hàng Kiệt Anh Nhi</h2>
-        <p>Trải nghiệm hương vị Thái Lan tại Việt Nam</p>
-    </div>
-
     <div class="container">
-        <section class="section" id="tvc-video">
-            <h2>TVC Giới thiệu Nhà hàng</h2>
-            <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-                <iframe
-                    src="https://www.youtube.com/embed/EXvqPsX8j2E?si=i4K0D84WuPzBazcr"
-                    title="TVC Nhà hàng Kiệt Anh Nhi"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
-                </iframe>
-            </div>
-        </section>
-
-        <section class="section promotions" id="about">
-            <h2>Khuyến mãi</h2>
-            <p>🔥 Giảm 20% cho đơn hàng trên 500.000 VNĐ! Áp dụng từ thứ 2 đến thứ 5.</p>
-            <p>🚚 Miễn phí giao hàng trong khu vực Đồng Nai cho đơn từ 300.000 VNĐ.</p>
-            <p>👨‍👩‍👧‍👦 Combo gia đình: Giảm 15% khi đặt bàn cho 4 người trở lên.</p>
-            <p>⏰ Happy Hour: Giảm 10% cho tất cả món ăn từ 17:00 - 19:00 hàng ngày.</p>
-            <p>🎂 Sinh nhật đặc biệt: Miễn phí món tráng miệng cho khách có sinh nhật trong tháng.</p>
-            <p>💳 Thẻ thành viên: Tích điểm với mỗi đơn hàng, đổi quà hấp dẫn sau 10 lần mua.</p>
-            <p>💑 Combo đôi lứa: Giảm 12% khi đặt combo cho 2 người.</p>
-            <p>🪔 Ngày lễ Thái: Giảm 25% vào các ngày lễ Songkran và Loy Krathong.</p>
-        </section>
-
-        <section class="section" id="contact">
-            <h2>Liên hệ</h2>
-            <div class="contact-card">
-                <div class="contact-details">
-                    <p><strong>Địa chỉ:</strong> 206 Đường Nguyễn Khuyến, Khu Phố 5, Phường Trảng Dài, Tỉnh Đồng Nai</p>
-                    <p><strong>Điện thoại:</strong> <a href="tel:02516538167">02516 538 167</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:fit@dntu.edu.vn">fit@dntu.edu.vn</a></p>
-                    <p><strong>Giờ mở cửa:</strong> 10:00 - 22:00 (Hàng ngày)</p>
+        <section class="section">
+            <h2>Thực đơn nổi bật</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Pad Thai</h3>
+                    <p>Mì Thái xào với tôm, gà, trứng và rau tươi</p>
+                    <p class="price">85.000 VNĐ</p>
                 </div>
-                <iframe src="https://maps.google.com/maps?q=Trường%20đại%20học%20Công%20nghệ%20Đồng%20Nai&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="menu-item">
+                    <h3>Tom Yum Goong</h3>
+                    <p>Canh chua cay với tôm, nấm và cỏ Thái</p>
+                    <p class="price">95.000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Green Curry</h3>
+                    <p>Cà ri xanh với gà, cà chua và lá basil</p>
+                    <p class="price">90.000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Som Tam</h3>
+                    <p>Xà lách đu đủ cay cay kiểu Thái</p>
+                    <p class="price">75.000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Massaman Curry</h3>
+                    <p>Cà ri Massaman với thịt bò và khoai tây</p>
+                    <p class="price">100.000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Pad See Ew</h3>
+                    <p>Mì xào với thịt bò và rau bina</p>
+                    <p class="price">80.000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tom Kha Gai</h3>
+                    <p>Canh chua ngọt với gà và dừa</p>
+                    <p class="price">85.000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Mango Sticky Rice</h3>
+                    <p>Xôi xoài dừa</p>
+                    <p class="price">60.000 VNĐ</p>
+                </div>
             </div>
         </section>
     </div>
+
+    <section class="section" id="contact">
+        <h2>Liên hệ</h2>
+        <div class="contact-card">
+            <div class="contact-details">
+                <p><strong>Địa chỉ:</strong> 206 Đường Nguyễn Khuyến, Khu Phố 5, Phường Trảng Dài, Tỉnh Đồng Nai</p>
+                <p><strong>Điện thoại:</strong> <a href="tel:02516538167">02516 538 167</a></p>
+                <p><strong>Email:</strong> <a href="mailto:fit@dntu.edu.vn">fit@dntu.edu.vn</a></p>
+                <p><strong>Giờ mở cửa:</strong> 10:00 - 22:00 (Hàng ngày)</p>
+            </div>
+            <iframe src="https://maps.google.com/maps?q=Trường%20đại%20học%20Công%20nghệ%20Đồng%20Nai&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Nhà hàng Ăn Thái. Tất cả quyền được bảo lưu.</p>
