@@ -11,25 +11,13 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #d4231f 0%, #ff6b6b 100%);
+    background: url('image/ảnhdntu.png') no-repeat center center;
+    background-size: cover;
     color: white;
     padding: 30px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('image/ảnhdntu.png') no-repeat center;
-    background-size: cover;
-    opacity: 0.1;
-    z-index: 0;
 }
 
 header h1,
