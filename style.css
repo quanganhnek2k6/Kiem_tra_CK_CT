@@ -26,7 +26,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('https://dntu.edu.vn/storage/Setting/01KG9CYF13JZHBT05Z66XVDNWW.png') no-repeat center;
+    background: url('image/ảnhdntu.png') no-repeat center;
     background-size: cover;
     opacity: 0.1;
     z-index: 0;
@@ -114,7 +114,7 @@ nav a:hover {
 }
 
 .pad-thai {
-    background-image: url('Phat_Thai_kung_Chang_Khien_street_stall.jpg');
+    background-image: url('image/Phat_Thai_kung_Chang_Khien_street_stall.jpg');
 }
 
 .tom-yum {
@@ -122,27 +122,27 @@ nav a:hover {
 }
 
 .green-curry {
-    background-image: url('Thai_green_chicken_curry_and_roti.jpg');
+    background-image: url('image/Thai_green_chicken_curry_and_roti.jpg');
 }
 
 .som-tam {
-    background-image: url('Som_tam_thai.jpg');
+    background-image: url('image/Som_tam_thai.jpg');
 }
 
 .massaman {
-    background-image: url('Kaeng_matsaman_kai.jpg');
+    background-image: url('image/Kaeng_matsaman_kai.jpg');
 }
 
 .pad-see-ew {
-    background-image: url('Pad_see_ew.jpg');
+    background-image: url('image/Pad_see_ew.jpg');
 }
 
 .tom-kha {
-    background-image: url('Flickr_preppybyday_4711943668--Tom_kha_gai.jpg');
+    background-image: url('image/Tom_kha_gai.jpg');
 }
 
 .mango-sticky-rice {
-    background-image: url('960px-Mango_sticy_rice_(3859549574).jpg');
+    background-image: url('image/Mango_sticky_rice.jpg');
 }
 
 .menu-item h3 {
@@ -266,15 +266,15 @@ footer {
 }
 
 .chef {
-    background-image: url('ảnhpecao.png');
+    background-image: url('image/ảnhpecao.png');
 }
 
 .manager {
-    background-image: url('hình tnhi.jpg');
+    background-image: url('image/hình tnhi.jpg');
 }
 
 .expert {
-    background-image: url('ảnh lặc.png');
+    background-image: url('image/ảnh lặc.png');
 }
 
 .member-info {
