@@ -1,289 +1,71 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background: url('image/ảnhdntu.png') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 30px 20px;
+    background: #f4f4f4;
+    padding: 20px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
-header h1,
-header p,
-.logo {
-    position: relative;
-    z-index: 1;
-}
-
-.logo {
-    margin-bottom: 10px;
-}
-
-.logo img {
-    max-width: 50px;
-    height: auto;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 5px;
-}
-
-header p {
-    font-size: 1.2em;
+header .logo img {
+    max-width: 100px;
 }
 
 nav {
-    background-color: #333;
-    padding: 10px;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
+    color: #fff;
     margin: 0 15px;
-    font-weight: bold;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #d4231f;
+    text-decoration: underline;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .section {
-    margin-bottom: 40px;
-}
-
-.section h2 {
-    color: #d4231f;
     margin-bottom: 20px;
-    font-size: 2em;
-}
-
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.menu-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.menu-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.pad-thai {
-    background-image: url('image/Phat_Thai_kung_Chang_Khien_street_stall.jpg');
-}
-
-.tom-yum {
-    background-image: url('image/Tom_yam_kung_maenam.jpg');
-}
-
-.green-curry {
-    background-image: url('image/Thai_green_chicken_curry_and_roti.jpg');
-}
-
-.som-tam {
-    background-image: url('image/Som_tam_thai.jpg');
-}
-
-.massaman {
-    background-image: url('image/Kaeng_matsaman_kai.jpg');
-}
-
-.pad-see-ew {
-    background-image: url('image/Pad_see_ew.jpg');
-}
-
-.tom-kha {
-    background-image: url('image/Flickr_preppybyday_4711943668--Tom_kha_gai.jpg');
-}
-
-.mango-sticky-rice {
-    background-image: url('image/960px-Mango_sticy_rice_(3859549574).jpg');
-}
-
-.menu-item h3 {
-    color: #d4231f;
-    margin-bottom: 10px;
-}
-
-.menu-item p {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.price {
-    color: #d4231f;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.contact-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-top: 20px;
-    display: grid;
-    gap: 20px;
-}
-
-.contact-card .contact-details p {
-    margin: 8px 0;
-}
-
-.contact-card .contact-details p strong {
-    color: #d4231f;
-}
-
-.contact-card iframe {
-    border-radius: 8px;
-    width: 100%;
-    min-height: 280px;
-}
-
-@media (min-width: 768px) {
-    .contact-card {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.banner {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSkwsXBUdFwoyCLVCkQ9-adkRwsamgobJlg&s');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.banner h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.banner p {
-    font-size: 1.3em;
-}
-
-.promotions p {
-    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-    color: #333;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-left: 5px solid #d4231f;
-    transition: transform 0.3s ease;
-}
-
-.promotions p:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .member {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.member:hover {
-    transform: translateY(-10px);
+    width: 30%;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .member-image {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3em;
-}
-
-.chef {
-    background-image: url('image/ảnhpecao.png');
-}
-
-.manager {
-    background-image: url('image/hình tnhi.jpg');
-}
-
-.expert {
-    background-image: url('image/ảnh lặc.png');
-}
-
-.member-info {
-    padding: 25px;
-}
-
-.member-info h3 {
-    color: #d4231f;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-}
-
-.member-info p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    font-size: 0.95em;
-}
-
-.role {
-    color: #d4231f;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
