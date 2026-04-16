@@ -4,138 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thực đơn - Nhà hàng Kiệt Anh Nhi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #d4231f 0%, #ff6b6b 100%);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://dntu.edu.vn/storage/Setting/01KG9CYF13JZHBT05Z66XVDNWW.png') no-repeat center;
-            background-size: cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        header h1, header p, .logo {
-            position: relative;
-            z-index: 1;
-        }
-        .logo {
-            margin-bottom: 10px;
-        }
-        .logo img {
-            max-width: 50px;
-            height: auto;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
-        }
-        header p {
-            font-size: 1.2em;
-        }
-        nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #d4231f;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            color: #d4231f;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-        .menu-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .menu-item {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .menu-item h3 {
-            color: #d4231f;
-            margin-bottom: 10px;
-        }
-        .menu-item p {
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .price {
-            color: #d4231f;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .contact-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-top: 20px;
-            display: grid;
-            gap: 20px;
-        }
-        .contact-card .contact-details p {
-            margin: 8px 0;
-        }
-        .contact-card .contact-details p strong {
-            color: #d4231f;
-        }
-        .contact-card iframe {
-            border-radius: 8px;
-            width: 100%;
-            min-height: 280px;
-        }
-        @media (min-width: 768px) {
-            .contact-card {grid-template-columns: 1fr 1fr;}
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -158,41 +27,49 @@
             <h2>Thực đơn nổi bật</h2>
             <div class="menu-items">
                 <div class="menu-item">
+                    <div class="menu-image pad-thai" aria-hidden="true"></div>
                     <h3>Pad Thai</h3>
                     <p>Mì Thái xào với tôm, gà, trứng và rau tươi</p>
                     <p class="price">85.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image tom-yum" aria-hidden="true"></div>
                     <h3>Tom Yum Goong</h3>
                     <p>Canh chua cay với tôm, nấm và cỏ Thái</p>
                     <p class="price">95.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image green-curry" aria-hidden="true"></div>
                     <h3>Green Curry</h3>
                     <p>Cà ri xanh với gà, cà chua và lá basil</p>
                     <p class="price">90.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image som-tam" aria-hidden="true"></div>
                     <h3>Som Tam</h3>
                     <p>Xà lách đu đủ cay cay kiểu Thái</p>
                     <p class="price">75.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image massaman" aria-hidden="true"></div>
                     <h3>Massaman Curry</h3>
                     <p>Cà ri Massaman với thịt bò và khoai tây</p>
                     <p class="price">100.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image pad-see-ew" aria-hidden="true"></div>
                     <h3>Pad See Ew</h3>
                     <p>Mì xào với thịt bò và rau bina</p>
                     <p class="price">80.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image tom-kha" aria-hidden="true"></div>
                     <h3>Tom Kha Gai</h3>
                     <p>Canh chua ngọt với gà và dừa</p>
                     <p class="price">85.000 VNĐ</p>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-image mango-sticky-rice" aria-hidden="true"></div>
                     <h3>Mango Sticky Rice</h3>
                     <p>Xôi xoài dừa</p>
                     <p class="price">60.000 VNĐ</p>
