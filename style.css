@@ -3,12 +3,54 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: #fffdf8;
+}
+
+.tvc-top {
+    background: linear-gradient(135deg, #ffe6c7, #ffd3a8);
+    padding: 24px 0;
+}
+
+.tvc-top h2 {
+    margin: 0 0 8px;
+}
+
+.tvc-frame {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #f0a45d;
+    background: #000;
+}
+
+.tvc-frame iframe {
+    width: 100%;
+    height: 420px;
+    display: block;
+}
+
+.tvc-note {
+    margin-top: 10px;
+    color: #7a4b1f;
+    font-style: italic;
 }
 
 header {
     background: #f4f4f4;
     padding: 20px;
     text-align: center;
+}
+
+.home-header {
+    background-image: linear-gradient(rgba(40, 23, 8, 0.55), rgba(40, 23, 8, 0.55)),
+        url("image/ảnhdntu.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.home-header p,
+.home-header h1 {
+    color: #fff;
 }
 
 header .logo img {
@@ -32,12 +74,212 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.hero-banner {
+    min-height: 420px;
+    background-image: linear-gradient(rgba(28, 19, 10, 0.45), rgba(28, 19, 10, 0.45)),
+        url("image/Thai_green_chicken_curry_and_roti.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.hero-overlay {
+    background: rgba(255, 250, 242, 0.9);
+    max-width: 760px;
+    padding: 28px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero-tag {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a54f0d;
+    font-weight: bold;
+}
+
+.hero-overlay h2 {
+    margin: 8px 0 10px;
+    color: #6a3006;
+}
+
+.hero-overlay p {
+    margin: 0 0 16px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #c25e15;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background: #9e490f;
+}
+
 .container {
     padding: 20px;
 }
 
 .section {
     margin-bottom: 20px;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.intro-grid .section {
+    margin-bottom: 0;
+}
+
+.welcome-box {
+    background: linear-gradient(150deg, #fff8ec 0%, #ffe7cf 55%, #ffdcb8 100%);
+    border: 1px solid #f1cda7;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 22px rgba(146, 73, 16, 0.15);
+}
+
+.welcome-kicker {
+    margin: 0 0 8px;
+    color: #b24b08;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+}
+
+.welcome-box h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.25;
+    color: #6b2f05;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.welcome-box p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #5d3b21;
+}
+
+.welcome-box p:last-child {
+    margin-bottom: 0;
+}
+
+.menu-heading {
+    font-size: 34px;
+    margin-bottom: 6px;
+    color: #8c3b00;
+    letter-spacing: 0.5px;
+}
+
+.menu-subheading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #6d4a2f;
+    font-style: italic;
+}
+
+.promotions {
+    margin-top: 30px;
+}
+
+.promo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.promo-item {
+    background: #ffffff;
+    border: 1px solid #f3d2af;
+    border-left: 6px solid #e7893c;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.promo-item h3 {
+    margin: 0 0 8px;
+    color: #9f4c08;
+}
+
+.promo-item p {
+    margin: 0;
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h3 {
+    margin-bottom: 12px;
+    color: #a64b09;
+    font-size: 24px;
+    border-left: 5px solid #d7772c;
+    padding-left: 10px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.dessert-image {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-item h4 {
+    margin: 12px 12px 6px;
+    font-size: 19px;
+    color: #5f2e08;
+}
+
+.menu-item .price {
+    margin: 0 12px 14px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #c75a10, #a53c06);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: bold;
 }
 
 .team {
@@ -53,11 +295,36 @@ nav a:hover {
 }
 
 .member-image {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
     border-radius: 50%;
     margin: 0 auto 10px;
+}
+
+.contact-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.contact-details {
+    background: #fff;
+    border: 1px solid #f2d7b8;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-map {
+    width: 100%;
+    min-height: 320px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 footer {
@@ -68,4 +335,35 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .member {
+        width: 100%;
+    }
+
+    .hero-banner {
+        min-height: 300px;
+        padding: 16px;
+    }
+
+    .hero-overlay {
+        padding: 20px;
+    }
+
+    .tvc-top {
+        padding: 18px 0;
+    }
+
+    .tvc-frame iframe {
+        height: 260px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
 }
