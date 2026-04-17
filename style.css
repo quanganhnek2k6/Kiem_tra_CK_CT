@@ -244,13 +244,130 @@ nav a:hover {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease;
 }
 
 .menu-item:hover {
     transform: translateY(-4px);
+}
+
+.menu-item:has(.menu-expand[open]) {
+    z-index: 25;
+}
+
+.menu-item:has(.menu-expand[open]):hover {
+    transform: none;
+}
+
+.menu-expand {
+    width: 100%;
+}
+
+.menu-expand[open] {
+    position: relative;
+    z-index: 20;
+}
+
+.menu-expand summary {
+    position: relative;
+    display: block;
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.35s ease, transform 0.3s ease;
+}
+
+.menu-expand summary::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 11px;
+    height: 11px;
+    border-right: 3px solid #8a4a16;
+    border-bottom: 3px solid #8a4a16;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.menu-expand summary::-webkit-details-marker {
+    display: none;
+}
+
+.tap-hint {
+    margin: 0 12px 12px;
+    font-size: 12px;
+    color: #a65a1f;
+    font-style: italic;
+}
+
+.menu-info {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: calc(100% + 6px);
+    margin: 0;
+    border: 1px solid #f1cda7;
+    border-radius: 10px;
+    background: #fffaf2;
+    box-shadow: 0 10px 20px rgba(96, 45, 12, 0.2);
+    padding: 0 12px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease, transform 0.35s ease, padding-top 0.35s ease;
+    pointer-events: none;
+}
+
+.menu-info p {
+    margin: 0;
+    color: #6b4b31;
+    font-size: 14px;
+}
+
+.menu-info p + p {
+    margin-top: 6px;
+}
+
+.menu-expand[open] .tap-hint {
+    color: #7a2f00;
+    font-weight: bold;
+}
+
+.menu-expand[open] summary {
+    background: linear-gradient(180deg, rgba(255, 228, 199, 0.95), rgba(255, 255, 255, 0));
+    transform: none;
+    border-left: 4px solid #d7772c;
+}
+
+.menu-expand[open] summary::after {
+    transform: rotate(225deg) scale(1.05);
+}
+
+.menu-expand[open] .menu-info {
+    max-height: 560px;
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation: menuInfoIn 0.4s ease;
+    pointer-events: auto;
+}
+
+@keyframes menuInfoIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .menu-item img {
@@ -327,6 +444,14 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.drinks-category {
+    transition: padding-bottom 0.35s ease;
+}
+
+.drinks-category:has(.menu-expand[open]) {
+    padding-bottom: 280px;
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -365,5 +490,9 @@ footer {
 
     .contact-card {
         grid-template-columns: 1fr;
+    }
+
+    .drinks-category:has(.menu-expand[open]) {
+        padding-bottom: 360px;
     }
 }
