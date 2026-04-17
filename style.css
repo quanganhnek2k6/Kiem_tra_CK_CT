@@ -477,10 +477,33 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.member {
+.member-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
     width: 30%;
     margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-link:hover {
+    transform: translateY(-8px);
+}
+
+.member-link:hover .member {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member {
+    width: 100%;
     text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.member-link:hover .member {
+    background: rgba(255, 240, 220, 0.5);
 }
 
 .member-image {
@@ -491,6 +514,11 @@ nav a:hover {
     display: block;
     border-radius: 50%;
     margin: 0 auto 10px;
+    transition: transform 0.3s ease;
+}
+
+.member-link:hover .member-image {
+    transform: scale(1.08);
 }
 
 .contact-card {
@@ -532,6 +560,119 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.founder-profile {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.founder-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0a45d;
+}
+
+.founder-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.founder-title h2 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    color: #8c3b00;
+}
+
+.founder-title .role {
+    margin: 0;
+    font-size: 18px;
+    color: #b24b08;
+    font-weight: bold;
+}
+
+.founder-content {
+    margin-bottom: 30px;
+}
+
+.founder-section {
+    margin-bottom: 25px;
+}
+
+.founder-section h3 {
+    color: #a64b09;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-left: 4px solid #d7772c;
+    padding-left: 12px;
+}
+
+.founder-section p {
+    color: #5d3b21;
+    line-height: 1.8;
+    margin: 0 0 12px;
+}
+
+.founder-section p:last-child {
+    margin-bottom: 0;
+}
+
+.founder-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #f0a45d;
+}
+
+.back-link {
+    display: inline-block;
+    color: #c25e15;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    border: 2px solid #c25e15;
+}
+
+.back-link:hover {
+    background: #c25e15;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .founder-profile {
+        padding: 20px;
+    }
+
+    .founder-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .founder-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .founder-title h2 {
+        font-size: 24px;
+    }
+
+    .member-link {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
