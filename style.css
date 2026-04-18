@@ -42,7 +42,7 @@ header {
 
 .home-header {
     background-image: linear-gradient(rgba(40, 23, 8, 0.55), rgba(40, 23, 8, 0.55)),
-        url("image/ảnhdntu.png");
+        url("image/ảnhnhahang.png");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -109,7 +109,7 @@ header {
 }
 
 header .logo img {
-    max-width: 100px;
+    max-width: 120px;
 }
 
 @keyframes fadeIn {
@@ -136,7 +136,7 @@ nav a {
     color: #fff;
     margin: 0 20px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.3s ease;
     position: relative;
     padding-bottom: 4px;
@@ -832,6 +832,91 @@ footer {
     padding: 30px 40px;
     background: #fff9f3;
     border-top: 2px dashed #ff9f5a;
+}
+
+.about-page {
+    background:
+        radial-gradient(circle at 8% 12%, rgba(255, 135, 67, 0.2), transparent 26%),
+        radial-gradient(circle at 90% 16%, rgba(255, 208, 0, 0.18), transparent 24%),
+        radial-gradient(circle at 18% 88%, rgba(255, 99, 146, 0.16), transparent 30%),
+        linear-gradient(160deg, #fff3dd 0%, #ffe8ca 42%, #ffecc0 100%);
+}
+
+.about-page .container {
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.75), rgba(255, 248, 235, 0.86));
+    border: 1px solid #f4d2ac;
+    border-radius: 18px;
+    box-shadow: 0 16px 32px rgba(129, 55, 0, 0.12);
+}
+
+.about-page .section {
+    background: linear-gradient(170deg, #fffdf6 0%, #fff7e9 100%);
+    border: 2px solid #ffd6ad;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(129, 55, 0, 0.1);
+}
+
+.about-page .section h2 {
+    display: inline-block;
+    margin-top: 0;
+    color: #9a3600;
+    background: linear-gradient(135deg, #ffe49f, #ffd2ad, #ffc18a);
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #f3b879;
+}
+
+.about-page .section > h3 {
+    color: #8f2f00;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.about-page .section > p {
+    color: #5a3417;
+}
+
+.about-page .team {
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.about-page .member {
+    background: linear-gradient(155deg, #fff 0%, #fff7ea 100%);
+    border: 2px solid #ffd9b2;
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.about-page .member-link:nth-child(1) .member {
+    background: linear-gradient(160deg, #fff0df, #ffe1bf);
+    border-color: #ffbf8d;
+}
+
+.about-page .member-link:nth-child(2) .member {
+    background: linear-gradient(160deg, #fff2f8, #ffe0ef);
+    border-color: #ffb2ce;
+}
+
+.about-page .member-link:nth-child(3) .member {
+    background: linear-gradient(160deg, #eff8ff, #dff1ff);
+    border-color: #a7d4ff;
+}
+
+.about-page .member-image {
+    border: 4px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 6px 16px rgba(54, 28, 8, 0.2);
+}
+
+.about-page .member-info h3 {
+    margin-bottom: 4px;
+    color: #6f2f00;
+}
+
+.about-page .member-info .role {
+    color: #a74300;
+    font-weight: bold;
 }
 
 .back-link {
