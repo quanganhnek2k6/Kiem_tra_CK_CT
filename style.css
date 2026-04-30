@@ -109,7 +109,9 @@ header {
 }
 
 header .logo img {
-    max-width: 120px;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
 }
 
 @keyframes fadeIn {
