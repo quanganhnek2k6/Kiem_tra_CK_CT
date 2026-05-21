@@ -2,45 +2,57 @@
 <html lang="vi">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Tài Khoản</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Khoản</title>
+    <link rel="icon" type="image/x-icon" href="Favicon.ico">
+    <link rel="apple-touch-icon" href="image/logo-Photoroom.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="account-page-body">
 
-<div class="account-box">
+    <header class="home-header">
+        <div class="logo">
+            <img src="image/logo-Photoroom.png" alt="Logo Nhà hàng KAN">
+        </div>
+        <h1>🍜 Nhà hàng KAN 🍜</h1>
+        <p>✨ Hương vị chính hiệu xứ Chùa ✨</p>
+    </header>
 
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="menu.html">Thực đơn</a>
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="order.html">Đặt bàn</a>
+        <a href="shopping.html">Giỏ hàng</a>
+        <a href="taikhoan.html">Tài khoản</a>
+    </nav>
 
-</div>
+    <div class="container">
+        <div class="account-box">
 
-<script src="shoping.js"></script>
+            <h1>👤 Tài Khoản</h1>
 
+            <input type="text" id="username" placeholder="Tên đăng nhập">
 
-</body>
-</html>
-    if(
-        username === savedUser &&
-        password === savedPass
-    ){
+            <input type="password" id="password" placeholder="Mật khẩu">
 
-        document.getElementById("welcome")
-        .innerText =
-        "Xin chào " + username + " 👋";
+            <button onclick="register()">Đăng ký</button>
 
-    }
+            <button onclick="login()">Đăng nhập</button>
 
-    else{
+            <p id="welcome">Chưa đăng nhập</p>
 
-        alert("Sai tài khoản hoặc mật khẩu!");
+        </div>
+    </div>
 
-    }
+    <footer>
+        <p>&copy; 2026 Nhà hàng KAN. Tất cả quyền được bảo lưu.</p>
+    </footer>
 
-}
-
-</script>
+    <script src="shoping.js"></script>
 
 </body>
 </html>
