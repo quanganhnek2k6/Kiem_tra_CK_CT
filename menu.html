@@ -24,6 +24,8 @@
         <a href="about.html">Về chúng tôi</a>
         <a href="contact.html">Liên hệ</a>
         <a href="order.html">Đặt bàn</a>
+        <a href="shopping.html">Giỏ hàng</a>
+        <a href="taikhoan.html">Tài khoản</a>
     </nav>
 
     <div class="container">
@@ -37,8 +39,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img src="image/Phat_Thai_kung_Chang_Khien_street_stall.jpg" alt="Pad Thai">
-                                <h4>Pad Thai</h4>
+                                <h4>Pad Thai(ผัดไทย)</h4>
                                 <p class="price">120.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Pad Thai',120000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -54,8 +57,9 @@
                             <summary>
                                 <img src="image/Tom_yam_kung_maenam.jpg" alt="Tom Yum">
                                 <span class="best-seller-badge">Best Seller</span>
-                                <h4>Tom Yum</h4>
+                                <h4>Tom Yum(ตัมยำ)</h4>
                                 <p class="price">150.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Tom Yum',150000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -69,16 +73,51 @@
                     <article class="menu-item">
                         <details class="menu-expand">
                             <summary>
-                                <img src="https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/huyendt/tomxaotoikieuthai/T%C3%B4m%20x%C3%A0o%20t%E1%BB%8Fi%20ki%E1%BB%83u%20Th%C3%A1i%201.png" alt="Tôm xào tỏi">
-                                <h4>Tôm xào tỏi</h4>
-                                <p class="price">130.000 VNĐ</p>
+                                <img src="image/ก๋วยเตี๋ยวเรือ.webp" alt="Hủ tiếu thuyền">
+                                <h4>Hủ tiếu thuyền(ก๋วยเตี๋ยวเรือ)</h4>
+                                <p class="price">180.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Hủ tiếu thuyền',180000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
-                                <p><strong>Thành phần:</strong> Tôm, tỏi, ớt, nước mắm, dầu ăn.</p>
-                                <p><strong>Hương vị:</strong> Béo nhẹ từ nước cốt dừa, cay thơm và hậu vị ngọt dịu.</p>
-                                <p><strong>Độ cay:</strong> Vừa đến cay, phù hợp ăn cùng cơm nóng hoặc bánh mì.</p>
-                                <p><strong>Gợi ý:</strong> Kết hợp với Trà Thái để cân bằng vị cay.</p>
+                                <p><strong>Thành phần:</strong> Sợi hủ tiếu hoặc mì nhỏ, nước dùng ninh từ xương heo (hoặc bò, thịt bò/heo thái lát), viên thịt hoặc gan heo, giá đỗ, rau thơm, hành lá, tỏi phi, tiêu, ớt khô, gia vị Thái như nước mắm, quế, hồi, sa tế. </p>
+                                <p><strong>Hương vị:</strong> Mặn ngọt hài hòa từ nước hầm xương và nước mắm Thái, thơm mùi thảo mộc như quế, hồi, rau thơm, hơi béo từ nước dùng và thịt, chua nhẹ nhờ chanh hoặc giấm ớt, cay the từ ớt Thái và tiêu.</p>
+                                <p><strong>Độ cay:</strong> Rất cay vì dùng ớt bột và ớt tươi Thái.</p>
+                                <p><strong>Gợi ý:</strong> Trà sữa Thái vị ngọt béo giúp giảm cay rất hợp, nước chanh hoặc soda chanh, trà đá Thái, nước dừa lạnh.</p>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="menu-item">
+                        <details class="menu-expand">
+                            <summary>
+                                <img src="image/gà xào lá hương nhu.jpg" alt="Gà xào lá hương nhu">
+                                <h4>Gà xào lá hương nhu(ผัดกะเพราไก่)</h4>
+                                <p class="price">90.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Gà xào lá hương nhu',90000)">Thêm vào giỏ</button>
+                                <p class="tap-hint">Bấm để xem chi tiết món</p>
+                            </summary>
+                            <div class="menu-info">
+                                <p><strong>Thành phần:</strong> Thịt gà băm hoặc thái nhỏ, lá hương nhu Thái, tỏi băm, ớt Thái, nước mắm, dầu hào, nước tương, đường, hành tây hoặc đậu que.</p>
+                                <p><strong>Hương vị:</strong> Mặn ngọt đậm đà, cay thơm từ ớt và lá hương nhu, rất thơm tỏi phi, hơi có mùi thảo mộc kiểu tiêu và quế nhẹ.</p>
+                                <p><strong>Độ cay:</strong> Món này thường có độ cay từ vừa đến rất cay vì dùng: ớt Thái tươi, tỏi phi, và xào lửa lớn nên vị cay khá “bốc”.</p>
+                                <p><strong>Gợi ý:</strong> Cơm trắng và trứng ốp la ăn kèm.</p>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="menu-item">
+                        <details class="menu-expand">
+                            <summary>
+                                <img src="image/canh nhạt.jpg" alt="Canh nhạt">
+                                <h4>Canh nhạt(ต้มจืด)</h4>
+                                <p class="price">60.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Canh nhạt',60000)">Thêm vào giỏ</button>
+                                <p class="tap-hint">Bấm để xem chi tiết món</p>
+                            </summary>
+                            <div class="menu-info">
+                                <p><strong>Thành phần:</strong> Nước dùng xương hoặc nước hầm rau củ, thịt heo bằm hoặc gà, đậu hũ, cải thảo, rau xanh hoặc bí, hành lá, ngò, tỏi, tiêu trắng, nước mắm Thái nhạt.</p>
+                                <p><strong>Hương vị:</strong> Thanh nhẹ, ít dầu mỡ, ngọt tự nhiên từ nước hầm, thơm mùi tiêu và rau, hơi mặn nhẹ kiểu nước canh gia đình.</p>
+                                <p><strong>Độ cay:</strong> Không cay hoặc chỉ cay rất nhẹ, chủ yếu thơm tiêu và thảo mộc hơn là vị ớt.</p>
+                                <p><strong>Gợi ý:</strong> Cơm trắng nóng, gà xào lá hương nhu Thái, thịt nướng hoặc cá chiên, trứng chiên kiểu Thái, rau luộc chấm sốt Thái.</p>
                             </div>
                         </details>
                     </article>
@@ -86,8 +125,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img src="image/Kaeng_matsaman_kai.jpg" alt="Gà Chiên Giòn">
-                                <h4>Gà Chiên Giòn</h4>
+                                <h4>Gà Chiên Giòn(ไก่ทอด)</h4>
                                 <p class="price">110.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Gà chiên giòn',110000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -109,8 +149,9 @@
                             <summary>
                                 <img class="dessert-image" src="image/960px-Mango_sticy_rice_(3859549574).jpg" alt="Mango Sticky Rice">
                                 <span class="best-seller-badge">Best Seller</span>
-                                <h4>Mango Sticky Rice</h4>
+                                <h4>Xôi xoài(ข้าวเหนียวมะม่วง)</h4>
                                 <p class="price">70.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Xôi xoài',70000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -125,8 +166,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img class="dessert-image" src="https://img-global.cpcdn.com/recipes/94ed61e1ace09cc3/1280x1280sq80/photo.webp" alt="Bánh Quên Nuốt - món tráng miệng ngọt mát">
-                                <h4>Bánh Quên Nuốt</h4>
+                                <h4>Bánh Quên Nuốt(ลืมกลืน)</h4>
                                 <p class="price">50.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Bánh quên nuốt',50000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -140,9 +182,27 @@
                     <article class="menu-item">
                         <details class="menu-expand">
                             <summary>
+                                <img class="dessert-image" src="image/bánh dừa.webp" alt="Bánh dừa">
+                                <h4>Bánh dừa(ขนมครก)</h4>
+                                <p class="price">60.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Bánh dừa',60000)">Thêm vào giỏ</button>
+                                <p class="tap-hint">Bấm để xem chi tiết món</p>
+                            </summary>
+                            <div class="menu-info">
+                                <p><strong>Thành phần:</strong> Nước cốt dừa, cùi dừa nạo, bột gạo hoặc bột mì, đường, trứng (tùy loại), lá dứa tạo mùi thơm, mè hoặc hành lá với loại bánh mặn ngọt.</p>
+                                <p><strong>Hương vị:</strong> Ngọt vừa, béo thơm mùi dừa, hơi thơm lá dứa, có hậu vị sữa dừa rất rõ.</p>
+                                <p><strong>Kết cấu:</strong> Vỏ ngoài hơi giòn hoặc vàng nhẹ, bên trong mềm ẩm, có độ dẻo nhẹ từ bột gạo và nước cốt dừa, cùi dừa tạo cảm giác sần nhẹ và dai thơm khi nhai.</p>
+                                <p><strong>Gợi ý:</strong> Ăn lúc còn ấm sẽ thơm dừa hơn, có thể rưới thêm sữa đặc hoặc mật ong nếu thích ngọt béo hơn, ăn sau món Thái cay sẽ rất hợp vì giúp dịu vị.</p>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="menu-item">
+                        <details class="menu-expand">
+                            <summary>
                                 <img class="dessert-image" src="https://www.tasteatlas.com/images/dishes/c13d6a2027374a2284c92e6200864d4a.jpg" alt="Tong Yip - món tráng miệng Thái truyền thống">
-                                <h4>Tong Yip</h4>
+                                <h4>Tong Yip(ทองหยิบ)</h4>
                                 <p class="price">65.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Tong Yip',65000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -156,9 +216,27 @@
                     <article class="menu-item">
                         <details class="menu-expand">
                             <summary>
-                                <img class="dessert-image" src="image/cach-lam-banh-chuoi-nuong.jpg" alt="Bánh Chuối Nướng Cốt Dừa">
-                                <h4>Bánh Chuối Nướng Cốt Dừa</h4>
+                                <img class="dessert-image" src="image/bánh vương miệng.jpg" alt="Bánh vương miệng">
+                                <h4>Bánh vương miệng(จ่ามงกุฎ)</h4>
                                 <p class="price">60.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Bánh vương miệng',60000)">Thêm vào giỏ</button>
+                                <p class="tap-hint">Bấm để xem chi tiết món</p>
+                            </summary>
+                            <div class="menu-info">
+                                <p><strong>Thành phần:</strong> Bột gạo hoặc bột đậu, nước cốt dừa, đường thốt nốt hoặc đường trắng, lòng đỏ trứng, hạt dưa/hạt sen hoặc đậu, lá vàng ăn được.</p>
+                                <p><strong>Hương vị:</strong> Ngọt dịu, béo thơm nước cốt dừa, hơi giống kẹo mềm truyền thống, có mùi thơm nhẹ của trứng và đường thắng.</p>
+                                <p><strong>Kết cấu:</strong> Mềm, hơi dẻo, mịn, tan nhẹ trong miệng.</p>
+                                <p><strong>Gợi ý:</strong> Trà nóng, trà Thái ít ngọt, trái cây chua nhẹ để cân vị ngọt.</p>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="menu-item">
+                        <details class="menu-expand">
+                            <summary>
+                                <img class="dessert-image" src="image/cach-lam-banh-chuoi-nuong.jpg" alt="Bánh Chuối Nướng Cốt Dừa">
+                                <h4>Bánh Chuối Nướng Cốt Dừa(ขนมกล้วย)</h4>
+                                <p class="price">60.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Bánh chuối nướng cốt dừa',60000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -179,8 +257,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img src="image/Cha_yen.jpg" alt="Trà Thái">
-                                <h4>Trà Thái</h4>
+                                <h4>Trà lạnh(ชาเย็น)</h4>
                                 <p class="price">30.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Trà lạnh',30000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -195,8 +274,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img src="image/images.jpg" alt="Nước dừa">
-                                <h4>Nước dừa</h4>
+                                <h4>Nước dừa(น้ำมะพร้าว)</h4>
                                 <p class="price">40.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Nước dừa',40000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -211,8 +291,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img src="image/bia-chang-chai-320ml.jpg" alt="Beer Thái">
-                                <h4>Beer Thái</h4>
+                                <h4>Beer Thái(เบียร์)</h4>
                                 <p class="price">60.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Beer Thái',60000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -228,8 +309,9 @@
                             <summary>
                                 <img src="image/8810491_upload-40-1716440412303.webp" alt="Trà Sữa Thái Đỏ">
                                 <span class="best-seller-badge">Best Seller</span>
-                                <h4>Trà Sữa Thái Đỏ</h4>
+                                <h4>Trà Sữa Thái Đỏ(ชาไทย)</h4>
                                 <p class="price">45.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Trà sữa thái đỏ',45000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -244,8 +326,9 @@
                         <details class="menu-expand">
                             <summary>
                                 <img src="https://r2.web-work.4handy.vn/uploads/upload/2024/05/upload-9-1716441993010.jpeg" alt="Trà Sữa Thái Xanh">
-                                <h4>Trà Sữa Thái Xanh</h4>
+                                <h4>Trà Sữa Thái Xanh(ชาเขียวเย็น)</h4>
                                 <p class="price">45.000 VNĐ</p>
+                                <button class="add-cart" onclick="addToCart('Trà sữa thái xanh',45000)">Thêm vào giỏ</button>
                                 <p class="tap-hint">Bấm để xem chi tiết món</p>
                             </summary>
                             <div class="menu-info">
@@ -259,10 +342,29 @@
                 </div>
             </div>
         </section>
-    </div>
+<footer>
+    <p>© 2026 Nhà hàng Thái</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2026 Nhà hàng KAN. Tất cả quyền được bảo lưu.</p>
-    </footer>
+<script>
+    function addToCart(name,price){
+
+    let cart =
+    JSON.parse(localStorage.getItem("cart"))
+    || [];
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+    alert("Đã thêm vào giỏ hàng!");
+    }
+</script>
+</div>
 </body>
 </html>

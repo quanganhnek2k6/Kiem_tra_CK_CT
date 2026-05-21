@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tài Khoản</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#fffaf5;
+    margin:0;
+    padding:0;
+}
+
+.account-box{
+
+    width:350px;
+
+    background:white;
+
+    margin:80px auto;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#b5838d;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#ffb4a2;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    margin-bottom:12px;
+
+}
+
+button:hover{
+
+    background:#e5989b;
+
+}
+
+#welcome{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#6b4f4f;
+
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="account-box">
+
+<h1>👤 Tài Khoản</h1>
+
+<input
+type="text"
+id="username"
+placeholder="Tên đăng nhập">
+
+<input
+type="password"
+id="password"
+placeholder="Mật khẩu">
+
+<button onclick="register()">
+Đăng ký
+</button>
+
+<button onclick="login()">
+Đăng nhập
+</button>
+
+<p id="welcome">
+Chưa đăng nhập
+</p>
+
+</div>
+
+<script>
+
+function register(){
+
+    let username =
+    document.getElementById("username").value;
+
+    let password =
+    document.getElementById("password").value;
+
+    if(username === "" || password === ""){
+
+        alert("Nhập đầy đủ thông tin!");
+
+        return;
+
+    }
+
+    localStorage.setItem(
+        "username",
+        username
+    );
+
+    localStorage.setItem(
+        "password",
+        password
+    );
+
+    alert("Đăng ký thành công!");
+
+}
+
+function login(){
+
+    let username =
+    document.getElementById("username").value;
+
+    let password =
+    document.getElementById("password").value;
+
+    let savedUser =
+    localStorage.getItem("username");
+
+    let savedPass =
+    localStorage.getItem("password");
+
+    if(
+        username === savedUser &&
+        password === savedPass
+    ){
+
+        document.getElementById("welcome")
+        .innerText =
+        "Xin chào " + username + " 👋";
+
+    }
+
+    else{
+
+        alert("Sai tài khoản hoặc mật khẩu!");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
