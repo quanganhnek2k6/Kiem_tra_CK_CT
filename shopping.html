@@ -5,66 +5,11 @@
 <meta charset="UTF-8">
 <title>Giỏ Hàng</title>
 
-<style>
-
-body{
-    font-family: Arial, sans-serif;
-    background:#fffaf5;
-    margin:0;
-}
-
-.container{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-}
-
-.cart-box{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
-}
-
-h1{
-    color:#b5838d;
-}
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    padding:15px;
-    border-bottom:1px solid #eee;
-}
-
-.total{
-    margin-top:20px;
-    font-size:22px;
-    font-weight:bold;
-    color:#e5989b;
-}
-
-.btn{
-    background:#ffb4a2;
-    color:white;
-    border:none;
-    padding:12px 18px;
-    border-radius:999px;
-    cursor:pointer;
-    margin-top:20px;
-}
-
-.btn:hover{
-    background:#e5989b;
-}
-
-</style>
-
 </head>
 
-<body>
+<body class="shopping-page-body">
 
-<div class="container">
+<div class="container cart-container">
 
 <div class="cart-box">
 
@@ -84,68 +29,6 @@ Thanh Toán
 
 </div>
 
-<script>
-
-let cart =
-JSON.parse(localStorage.getItem("cart")) || [];
-
-let cartList =
-document.getElementById("cart-list");
-
-let total = 0;
-
-function renderCart(){
-
-    cartList.innerHTML = "";
-
-    total = 0;
-
-    cart.forEach((item,index)=>{
-
-        cartList.innerHTML += `
-
-        <div class="cart-item">
-
-            <span>
-                ${item.name}
-            </span>
-
-            <span>
-                ${item.price.toLocaleString()} VNĐ
-            </span>
-
-            <button onclick="removeItem(${index})">
-                ❌
-            </button>
-
-        </div>
-
-        `;
-
-        total += item.price;
-
-    });
-
-    document.getElementById("total")
-    .innerText = total.toLocaleString();
-
-}
-
-function removeItem(index){
-
-    cart.splice(index,1);
-
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
-
-    renderCart();
-
-}
-
-renderCart();
-
-</script>
+<script src="shoping.js"></script>
 </body>
 </html>
