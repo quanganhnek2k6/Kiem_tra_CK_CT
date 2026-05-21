@@ -16,10 +16,19 @@
         </div>
         <h1>🍜 Nhà hàng KAN 🍜</h1>
         <p>✨ Hương vị chính hiệu xứ Chùa ✨</p>
-    </div>
+    </header>
 
-    <script src="shoping.js"></script>
-    </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="menu.html">Thực đơn</a>
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="order.html">Đặt bàn</a>
+        <a href="shopping.html">Giỏ hàng</a>
+        <a href="taikhoan.html">Tài khoản</a>
+    </nav>
+
+    <div class="container">
                     <article class="menu-item">
                         <details class="menu-expand">
                             <summary>
@@ -331,25 +340,7 @@
     <p>© 2026 Nhà hàng Thái</p>
 </footer>
 
-<script>
-    function addToCart(name,price){
-
-    let cart =
-    JSON.parse(localStorage.getItem("cart"))
-    || [];
-
-    cart.push({
-        name:name,
-        price:price
-    });
-
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
-    alert("Đã thêm vào giỏ hàng!");
-    }
-</script>
+    <script src="shoping.js"></script>
 </div>
 </body>
 </html>
