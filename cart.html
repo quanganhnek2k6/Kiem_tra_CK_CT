@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giỏ hàng - Nhà hàng KAN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="home-header">
+    <div class="logo"><img src="image/logo-Photoroom.png" alt="Logo Nhà hàng KAN"></div>
+    <h1>Giỏ hàng</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="menu.html">Thực đơn</a>
+    <a href="deliver.html">Giao đồ ăn</a>
+    <a href="order.html">Đặt bàn</a>
+  </nav>
+
+  <main class="container">
+    <section class="section">
+      <h2>Chi tiết giỏ hàng</h2>
+      <div id="cart-summary" class="cart-summary">
+        <!-- cart rows rendered here -->
+      </div>
+      <div id="cart-total" style="margin-top:12px;font-weight:700">Tổng: 0₫</div>
+      <div style="margin-top:14px">
+        <button id="clear-cart" class="cart-clear">Xóa giỏ</button>
+        <button id="to-order" class="cart-submit">Tiếp tục Đặt hàng</button>
+      </div>
+    </section>
+
+    <aside class="section">
+      <h3>Thông tin giao hàng (nếu có)</h3>
+      <div id="pending-info">Không có thông tin giao hàng tạm.</div>
+    </aside>
+  </main>
+
+  <footer style="text-align:center;padding:18px">© Nhà hàng KAN</footer>
+
+  <script>
+    (function(){
+      const KEY='kan_cart';
+      function loadCart(){ try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]} }
+      function formatVND(v){ return new Intl.NumberFormat('vi-VN',{style:'currency',currency:'VND'}).format(v); }
+      function render(){
+        const root = document.getElementById('cart-summary');
+        const totalEl = document.getElementById('cart-total');
+        const cart = loadCart();
+        root.innerHTML = '';
+        if(!cart.length){ root.innerHTML = '<div class="empty">Giỏ hàng trống</div>'; totalEl.textContent = 'Tổng: 0₫'; return; }
+        let total=0;
+        cart.forEach((it,idx)=>{
+          const row = document.createElement('div'); row.className='cart-item';
+          row.style.display='flex'; row.style.justifyContent='space-between'; row.style.alignItems='center'; row.style.padding='8px 6px';
+          row.innerHTML = `<div><div style="font-weight:700">${it.name}</div><div style="font-size:0.9rem;color:#666">Giá: ${formatVND(it.price)} • Số lượng: <input data-idx="${idx}" type="number" min="1" value="${it.qty}" style="width:64px"/></div></div><div style="text-align:right">${formatVND(it.price*it.qty)}<br/><button data-remove="${idx}" class="cart-remove">✕</button></div>`;
+          root.appendChild(row);
+          total += it.price*it.qty;
+        });
+        totalEl.textContent = 'Tổng: ' + formatVND(total);
+      }
+      function save(cart){ localStorage.setItem(KEY, JSON.stringify(cart)); }
+      document.addEventListener('click', function(e){
+        if(e.target.matches('.cart-clear')){ localStorage.removeItem(KEY); render(); }
+        if(e.target.matches('.cart-remove')){
+          const idx = Number(e.target.dataset.remove);
+          const cart = loadCart(); cart.splice(idx,1); save(cart); render();
+        }
+      });
+      document.addEventListener('input', function(e){
+        if(e.target.matches('input[data-idx]')){
+          const idx = Number(e.target.dataset.idx);
+          const val = Math.max(1, Number(e.target.value)||1);
+          const cart = loadCart(); if(cart[idx]){ cart[idx].qty = val; save(cart); render(); }
+        }
+      });
+
+      // show pending order info
+      function renderPending(){
+        const el = document.getElementById('pending-info');
+        const p = localStorage.getItem('kan_order_pending');
+        if(!p){ el.textContent = 'Không có thông tin giao hàng tạm.'; return; }
+        try{
+          const obj = JSON.parse(p);
+          el.innerHTML = `<div><strong>${obj.info.name||''}</strong><div>${obj.info.phone||''}</div><div>${obj.info.address||''}</div><div>Phương thức: ${obj.info.payment||''}</div><div>Ghi chú: ${obj.info.note||''}</div></div>`;
+        }catch(e){ el.textContent='Không đọc được thông tin tạm.' }
+      }
+
+      document.getElementById('to-order').addEventListener('click', function(){
+        // if there's a pending order saved by cart form, keep it; otherwise create one from empty info
+        const p = localStorage.getItem('kan_order_pending');
+        if(!p){
+          const order = { cart: loadCart(), info: { name:'', phone:'', address:'', payment:'Tiền mặt', note:'' }, createdAt: Date.now() };
+          try{ localStorage.setItem('kan_order_pending', JSON.stringify(order)); }catch(e){}
+        }
+        // go to order page to confirm
+        window.location.href='order.html';
+      });
+
+      render(); renderPending();
+    })();
+  </script>
+</body>
+</html>

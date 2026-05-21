@@ -585,10 +585,21 @@ nav a:hover::after {
     color: #8f3500;
 }
 
+.menu-page .menu-items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x proximity;
+}
+
 .menu-page .menu-item {
     background: linear-gradient(180deg, #fffdf9, #fff7ed);
     border: 1px solid #f0c9a3;
     box-shadow: 0 8px 18px rgba(183, 95, 30, 0.14);
+    flex: 0 0 260px;
+    scroll-snap-align: start;
 }
 
 .menu-page .menu-item:hover {
